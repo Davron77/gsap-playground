@@ -23,4 +23,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* height: 3000px; */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.img-holder {
+  position: sticky;
+  top: 0;
+  clip-path: polygon(35% 0%, 65% 0%, 65% 100%, 35% 100%);
 }
