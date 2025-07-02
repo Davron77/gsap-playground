@@ -40,7 +40,13 @@ body {
 }
 
 .img-holder {
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   clip-path: polygon(35% 0%, 65% 0%, 65% 100%, 35% 100%);
+  position: absolute;
+  transform: translate(-50%, 0%);
+  width: 99.1vw;
+  height: auto;
+  top: 0px;
+  left: 50%;
 }
