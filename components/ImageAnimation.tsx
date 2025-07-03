@@ -14,20 +14,6 @@ const ImageAnimation = () => {
 
   useGSAP(
     () => {
-      // ScrollSmoother.create({
-      //   smooth: 1,
-      //   effects: true,
-      // });
-
-      // gsap.registerPlugin(ScrollTrigger);
-      // ScrollTrigger.create({
-      //   trigger: ".box-c",
-      //   pin: true,
-      //   start: "center center",
-      //   end: "+=300",
-      //   markers: true,
-      // });
-
       gsap.registerPlugin(ScrollTrigger);
 
       const tl = gsap.timeline({
@@ -50,6 +36,7 @@ const ImageAnimation = () => {
       tl.to(".img-8", { x: "-20%", y: "70%" }, 0);
       tl.to(".img-9", { x: "20%", y: "-70%" }, 0);
       tl.to(".img-10", { x: "20%" }, 0);
+      tl.fromTo(".img-text", { opacity: 0 }, { opacity: 1 }, 0);
 
       // Phase 3: Center image expands
       tl.to(
@@ -75,9 +62,9 @@ const ImageAnimation = () => {
         style={{ backgroundImage: "url(/images/samarkhand.jpg)" }}
         data-speed="1"
       >
-        <div className="w-full h-full col-span-2 flex justify-center items-center bg-white p-10 gap-10 img-1">
+        <div className="w-full h-full col-span-2 flex justify-end items-center bg-white p-10 gap-10 img-1">
           <Image
-            className="img-2 w-3xs h-[400px]"
+            className="img-2 w-3xs h-[20%]"
             src={"/images/image-4.png"}
             alt="aa"
             width={480}
@@ -101,8 +88,12 @@ const ImageAnimation = () => {
             />
           </div>
         </div>
-        <div className="w-3xs h-full z-20"></div>
-        <div className="w-full h-full col-span-2 flex justify-center items-center bg-white p-10 gap-10 img-4">
+        <div className="w-3xs flex text-center items-center h-full z-20">
+          <h1 className="text-6xl font-bold text-white img-text uppercase">
+            Samarkand
+          </h1>
+        </div>
+        <div className="w-full h-full col-span-2 flex justify-start items-center bg-white p-10 gap-10 img-4">
           <div className="space-y-10" data-speed="0.8">
             <Image
               className="img-9"
@@ -120,7 +111,7 @@ const ImageAnimation = () => {
             />
           </div>
           <Image
-            className="img-5 w-3xs h-[400px]"
+            className="img-5 w-3xs h-[20%]"
             src={"/images/image-3.png"}
             alt="aa"
             width={480}
