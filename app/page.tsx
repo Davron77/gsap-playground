@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import HomeBanner from "@/components/HomeBanner";
-import ImageAnimation from "@/components/ImageAnimation";
+import SamarkandHero from "@/components/SamarkandHero";
 import React from "react";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <HomeBanner />
       <main>
-        <ImageAnimation />
+        <SamarkandHero />
       </main>
       <Footer />
     </div>
